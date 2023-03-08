@@ -5,6 +5,8 @@ import { AppService } from './app.service';
 import { CatModule } from './cats/cats.module';
 import { Cat } from './cats/entity/cats.entity';
 //import { CatsController } from './cats/cats.controller';
+import { AuthController } from './auth/auth.controller';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -18,7 +20,8 @@ import { Cat } from './cats/entity/cats.entity';
       database: 'pujaagarwal',
       entities: [Cat],
       synchronize: true,
-    }),],
+    }),
+    AuthModule,],
   controllers: [AppController],
   providers: [AppService],
 })

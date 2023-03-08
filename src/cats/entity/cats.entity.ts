@@ -10,4 +10,7 @@ export class Cat{
 
   @Column({ default: true })
   isActive: boolean;
+
+  @Column()
+  passcode: string;
 }

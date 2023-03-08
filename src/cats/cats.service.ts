@@ -23,6 +23,10 @@ export class CatsService {
         return this.catRepository.findOne({where: {id: catID}});
     }
 
+    getByName(name: string){
+        return this.catRepository.findOne({where: {name: name}})
+    }
+
     store(data: Object){
         return this.catRepository.save(data);
     }
